@@ -27,6 +27,19 @@ Redux is a small standalone JS library. However, it is commonly used with severa
 - The **Redux DevTools Extension** shows a history of the changes to the state in your Redux store over time.
 - This allows you to debug your applications effectively, including using powerful techniques like "time-travel debugging".
 
+# Terminology
+### Actions
+- An **action** is a plain JavaScript object that has a `type` field.
+- **You can think of an action as an event that describes something that happened in the application.**
+- The `type` field should be a string that gives this action a descriptive name, like `"todos/todoAdded"`.
+- An action object can have other fields with additional information about what happened. By convention, we put that information in a field called `payload`.
+```
+const addTodoAction = {
+  type: 'todos/todoAdded',
+  payload: 'Buy milk'
+}
+```
+
 # How to use Redux
 
 ### Create a redux store with `configureStore`
